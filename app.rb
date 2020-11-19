@@ -1,9 +1,12 @@
+#external
 require 'sinatra/base'
+require 'pg'
+#internal
 require './lib/peep'
 
 class App < Sinatra::Base
 
-	@peeps = Array.new
+	conn = PG.connect( dbname: 'chitter', port: '5433' )
 
 	get '/' do
 		erb :index
@@ -11,8 +14,6 @@ class App < Sinatra::Base
 
 	post '/peeps' do
 		text = params['text']
-		@peeps.push(Peep.new(text))
-		redirect '/'
 	end
 
 	run! if app_file == $0

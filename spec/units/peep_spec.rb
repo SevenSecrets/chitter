@@ -2,7 +2,7 @@ require 'peep'
 
 describe 'peep tests' do
 	before(:each) do
-		@peep = Peep.new("test peep")
+		@peep = Peep.new("test peep", "test")
 	end
 
 	it "should exist" do
@@ -15,5 +15,9 @@ describe 'peep tests' do
 
 	it "should be the right text" do
 		expect(@peep.text).to eq 'test peep'
+	end
+
+	it "should have author" do
+		expect(@peep.author).to eq 'test'
 	end
 end

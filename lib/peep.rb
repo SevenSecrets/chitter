@@ -1,7 +1,8 @@
 class Peep
-	attr_reader :text
+	attr_reader :text, :author
 	
-	def initialize(text)
+	def initialize(text, author)
 		@text = text
+		@author = author
 	end
 end 
