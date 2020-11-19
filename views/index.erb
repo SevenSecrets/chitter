@@ -1,0 +1,18 @@
+Chitter
+
+<% if @peeps %>
+	<ul>
+		<% @peeps.each do |peep| %>
+			<li><%= peep.text %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<form action="/peeps" method="POST">
+	<label for="text">
+	<br>
+	<input type="text" id="text" name="text">
+	<br>
+	<br>
+	<input type="submit" value="Send">
+</form>

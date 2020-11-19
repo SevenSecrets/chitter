@@ -1,0 +1,17 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/seven/Documents/Projects/chitter/spec/features/index_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1605487766
+  }
+}
