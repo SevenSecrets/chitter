@@ -9,11 +9,12 @@ class App < Sinatra::Base
 	conn = PG.connect( dbname: 'chitter', port: '5433' )
 
 	get '/' do
+		@cheets = Cheet.all
 		erb :index
 	end
 
 	post '/cheets' do
-		text = params['text']
+		Cheet.create(text: params[:text], author: 'default')
 		redirect('/')
 	end
 
