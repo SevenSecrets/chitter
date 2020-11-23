@@ -5,8 +5,9 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
-gem "capybara"
-gem "rspec"
 gem "sinatra"
-gem "selenium-webdriver"
 gem "pg"
+
+gem "selenium-webdriver", group: :test
+gem "capybara", group: :test
+gem "rspec", group: :test

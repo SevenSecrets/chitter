@@ -4,10 +4,10 @@ feature 'index page' do
 		expect(page).to have_content 'Chitter'
 	end
 
-	scenario 'can open index and send peep' do
+	scenario 'can open index and send cheet' do
 		visit('/')
-		fill_in('text', with: 'test peep')
+		fill_in('text', with: 'test cheet')
 		click_button('Send')
-		expect(page).to have_content 'test peep'
+		expect(page).to have_content 'test cheet'
 	end
 end

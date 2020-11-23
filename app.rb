@@ -2,7 +2,7 @@
 require 'sinatra/base'
 require 'pg'
 #internal
-require './lib/peep'
+require './lib/cheet'
 
 class App < Sinatra::Base
 
@@ -12,8 +12,9 @@ class App < Sinatra::Base
 		erb :index
 	end
 
-	post '/peeps' do
+	post '/cheets' do
 		text = params['text']
+		redirect('/')
 	end
 
 	run! if app_file == $0

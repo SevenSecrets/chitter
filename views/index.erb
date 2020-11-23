@@ -1,14 +1,14 @@
 Chitter
 
-<% if @peeps %>
+<% if @cheets %>
 	<ul>
-		<% @peeps.each do |peep| %>
-			<li><%= peep.text %></li>
+		<% @cheets.each do |cheet| %>
+			<li><%= cheet.text %></li>
 		<% end %>
 	</ul>
 <% end %>
 
-<form action="/peeps" method="POST">
+<form action="/cheets" method="POST">
 	<label for="text">
 	<br>
 	<input type="text" id="text" name="text">
