@@ -6,7 +6,7 @@ Chitter is a Twitter clone, mostly intended to help learn about integrating a Ru
 
 ### setup
 
-Firstly, Chitter requires two psql databases in order to run, one for development and production, and one for testing. The dev/production db is named `chitter` by default, and the test db is named `chitter_test`. Both should run on port 5433. Each db has a table named `cheets` to store the cheets (posts) created using this SQL:
+Firstly, Chitter requires two psql databases in order to run, one for development and production, and one for testing. The dev/production db is named `chitter` by default, and the test db is named `chitter_test`. Both should run on port 5433. Each db has a table named `cheets` to store the cheets (posts) created by running this SQL command after connecting to the db:
 
 ```
 	CREATE TABLE cheets (
